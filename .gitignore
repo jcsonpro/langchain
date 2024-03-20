@@ -1,2 +1,4 @@
 venv_langchain/
 langchain-master/
+.DS_STORE
+.git

@@ -4,7 +4,7 @@ from langchain.schema import HumanMessage
 
 output_parser = CommaSeparatedListOutputParser()
 
-chat = ChatOpenAI(model="gpt-3.5-turbo", )
+chat = ChatOpenAI(model="gpt-3.5-turbo-instruct", )
 
 result = chat(
     [

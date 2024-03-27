@@ -1,4 +1,8 @@
 
+# 언어모델을 호출할 때 입력되는 텍스트를 '프롬프트' 라고 함
+# 랭체인을 사용하지 않고 언어 모델을 호출하는 로직
+
+
 import json
 import openai  #← OpenAI에서 제공하는 Python 패키지 가져오기
 
@@ -7,13 +11,12 @@ response = openai.ChatCompletion.create(  #←OpenAI API를 호출하여 언어 
     messages=[
         {
             "role": "user",
-            # "content": "iPhone8 출시일을 알려주세요"  #←입력할 문장(프롬프트)
-            "content": "냉면의 원재료를 알려줘"
+            "content": "감자탕의 감자는 뭐야?"  #←입력할 문장(프롬프트)
         },
     ],
-    max_tokens=100,
-    temperature=1,
-    n=2
+    max_tokens = 100,
+    temperature = 1,
+    n = 2,
 )
 
 print(json.dumps(response, indent=2, ensure_ascii=False))

@@ -3,7 +3,7 @@ import openai
 
 response = openai.Completion.create(
     engine="gpt-3.5-turbo-instruct",
-    prompt="오늘 날씨가 매우 좋고 기분이",
+    prompt="비가 오는 날에는 회를",
     stop=".",
     max_tokens=100,
     n=2,
